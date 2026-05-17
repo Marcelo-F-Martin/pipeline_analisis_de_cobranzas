@@ -1,4 +1,4 @@
-# Pipeline para Análisis y Control de Cobranzas
+# Pipeline de ETL para Análisis y Control de Cobranzas
 
 Proyecto Integrador presentado en el marco del BootCamp de Data Analyst Full Program otorgado por Unicorn Academy [https://unicornacademy.es/](https://unicornacademy.es/)
 <hr />
@@ -19,8 +19,8 @@ Dar solución a la problemática planteada a partir de la orquestación de un pi
 
 ## 🛠️ Stack Tecnológico - Requisitos Previos
 - [x] **Windows** (orquestación diseñada para este OS).
-- [x] **Python 3.9+** (se recomienda el uso de Anaconda).
-- [x] **MySQL Server 8.0+** y **Connector/NET** (funcionando localmente) .
+- [x] **Python 3.9+** (se recomienda el uso de Jupyter Notebook - Anaconda).
+- [x] **MySQL Server 8.0+** y **Connector/NET 8.0.33** (funcionando localmente) .
 - [x] **Power BI Desktop** (visualización final).
 <hr />
 
@@ -29,12 +29,16 @@ Dar solución a la problemática planteada a partir de la orquestación de un pi
 > Siga estos pasos para reproducir el pipeline en su entorno local:
 
 1. Descargue todos los archivos dentro de ‘**Descargas**’ en el mismo directorio local
-2. Modifique el archivo ‘.env.example’con sus credenciales de MySQL, y luego renombre el archivo a ‘**.env**’
-3. Abra su editor (Jupyter Notebook, VS Code).
+2. Modifique el archivo ‘.env.example’con sus credenciales de acceso a MySQL, y luego renombre el archivo a ‘**.env**’
+3. Abra Jupyter Notebook.
 4. Ejecute el archivo ‘**PI_UA_orquestador.ipynb**’.
-5. El script validará la conexión, procesará los datos e informará el avance. 
+   * Importante: Ejecutar este archivo dentro del mismo directorio (carpeta) donde se descargaron los archivos del punto 1.
+     
+5. El script validará la conexión, procesará los datos e informará el avance de ejecución. 
 6. Al terminar el proceso, se da inicio a la plantilla de Power BI para visualizar los resultados.
 <hr />
 
 ## 🖊️ Autor
 Marcelo F. Martin - Contador Público & Analista de Datos
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](http://www.linkedin.com/in/marcelo-f-martin)
