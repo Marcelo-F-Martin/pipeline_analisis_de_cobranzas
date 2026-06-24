@@ -1,3 +1,7 @@
+# recupera varios archivos .xls desde el repositorio.
+# itera sobre cada uno de ellos en busqueda de una palabra clave para generar un dataframe de pandas.
+# unifica todos los df en un solo dataframe "df_final"
+
 import requests
 import pandas as pd
 import io
