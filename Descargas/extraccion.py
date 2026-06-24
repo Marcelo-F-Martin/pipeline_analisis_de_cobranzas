@@ -1,5 +1,6 @@
 def genera_unico_DF(lista_df):
   import requests
+  import pandas as pd
   
   df_definitivo_por_libro = []   
   total_registros = 0
