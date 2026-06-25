@@ -12,7 +12,7 @@ def limpiar_tilde(texto):
    
     return texto_sin_acentos
 
-def normalizar_encabezados(df)
+def normalizar_encabezados(df):
   # 1_estandariza a minusculas
   # 2_elimina espacios en blanco
   # 3_reemplaza vacíos por '_'
@@ -22,7 +22,7 @@ def normalizar_encabezados(df)
   df.columns = [transformacion.limpiar_tilde(col) for col in df.columns]
   return df
 
-def seleccionar_columnas(df)
+def seleccionar_columnas(df):
   # seleccion de columnas relevantes a importar a la Base de Datos
   
   lista_columnas_seleccionadas = [ 'periodo', 'asesor', 'fecha_operacion','contrato','comision', 'valor_neto', 'porcentaje_comision','forma_pago', 'numero_recibo', 'hoja_origen'  ]
