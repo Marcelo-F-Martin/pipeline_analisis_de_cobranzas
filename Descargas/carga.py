@@ -55,7 +55,7 @@ def recuperar_script_sql():
         print(f'✖️ Error al acceder al archivo Nº 3: Estado {respuesta_3.status_code}'),
         print(f'✖️ Error al acceder al archivo Nº 4: Estado {respuesta_4.status_code}')
 
-def ejecutar_script_sql():
+def ejecutar_script_sql(df):
     
     load_dotenv()
     
@@ -122,16 +122,16 @@ def ejecutar_script_sql():
         with engine_insert.begin() as connection:
             connection.execute(text(f"TRUNCATE TABLE {tabla_temp}"))
             
-            df_final_limpio.to_sql(
-                                    name=tabla_temp,
-                                    con=connection,
-                                    if_exists='append', 
-                                    index=False,
-                                    chunksize=1000, 
-                                    method='multi' # Para que sea masivo y no registro por registro
-                                  )
+            df.to_sql(
+                        name=tabla_temp,
+                        con=connection,
+                        if_exists='append', 
+                        index=False,
+                        chunksize=1000, 
+                        method='multi' # Para que sea masivo y no registro por registro
+                      )
         print('⏳...script 3 de 5 ...')   
-        print(f"✅ Datos ingestados en tabla '{tabla_temp}' de BD '{bd_capa_uno}':\n - {len(df_final_limpio)} registros insertados\n")
+        print(f"✅ Datos ingestados en tabla '{tabla_temp}' de BD '{bd_capa_uno}':\n - {len(df)} registros insertados\n")
 
         #__________________________________________________
         # 4.Pasa datos de tabla_temp a tabla_fact
