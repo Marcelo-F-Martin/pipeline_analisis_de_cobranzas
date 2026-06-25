@@ -48,11 +48,10 @@ def recuperar_script_sql():
         return script_sql_1, script_sql_2, script_sql_3, script_sql_4
         
     else:
-        return
-            print(f'✖️ Error al acceder al archivo Nº 1: Estado {respuesta_1.status_code}')
-            print(f'✖️ Error al acceder al archivo Nº 2: Estado {respuesta_2.status_code}')
-            print(f'✖️ Error al acceder al archivo Nº 3: Estado {respuesta_3.status_code}')
-            print(f'✖️ Error al acceder al archivo Nº 4: Estado {respuesta_4.status_code}')
+        return print(f'✖️ Error al acceder al archivo Nº 1: Estado {respuesta_1.status_code}'),
+        print(f'✖️ Error al acceder al archivo Nº 2: Estado {respuesta_2.status_code}'),
+        print(f'✖️ Error al acceder al archivo Nº 3: Estado {respuesta_3.status_code}'),
+        print(f'✖️ Error al acceder al archivo Nº 4: Estado {respuesta_4.status_code}')
 
 def ejecutar_script_sql():
     script_sql_1, script_sql_2, script_sql_3, script_sql_4 = recuperar_script_sql()
