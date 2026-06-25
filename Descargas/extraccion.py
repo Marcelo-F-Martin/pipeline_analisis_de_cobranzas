@@ -6,6 +6,24 @@ import requests
 import pandas as pd
 import io
 
+def extrae_archivos_del_repo()
+ # Conexión a repo GitHub
+ 
+ usuario = "Marcelo-F-Martin"
+ repo = "PI_UA_pipeline_analisis_de_cobranza"
+ 
+ # URL de la API para acceder al último release donde se alojan los archivos en crudo.
+ api_url = f"https://api.github.com/repos/{usuario}/{repo}/releases/latest"
+ 
+ respuesta = requests.get(api_url)
+ print('======================================================')
+ print('✅ Conexión Exitosa al Repositorio!') if respuesta.status_code == 200 else print(f' ✖️ Verificar Conexion al Repo. Código Devuelto: {respuesta.status_code}')
+ print('======================================================')
+ 
+ archivos_crudos = respuesta.json().get('assets', []) # El segundo argumento [] del .get(), es para que no rompa el codigo si la llave 'assets' no existe.
+ return archivos_crudos
+
+
 def genera_unico_DF(lista_dicc_repo):
  
  df_definitivo_por_libro = []   
