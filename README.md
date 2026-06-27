@@ -42,12 +42,6 @@ El archivo PBI, fue diseñado con: parámetros dinámicos de conexión a MySQL, 
 ```text
 pipeline_analisis_de_cobranzas/
 │
-├── sql/                                 # Scripts SQL
-│   ├── 1_PU_UA_DDL.sql                    # Define estructura de BDs
-│   ├── 2_PU_UA_inserts.sql                # Ingesta datos en BDs
-│   ├── 3_PU_UA_SO_calendario.sql          # Crea SP de para tabla dim "calendario"
-│   ├── 4_PU_UA_capa_dos_vistas.sql        # Crea vistas para consumo final
-│
 ├── data/                                # Datasets del proyecto
 │   ├── cruda/                             # Archivos .xls en crudo
 |   └── limpia/                            # Archivo .csv final
@@ -61,6 +55,12 @@ pipeline_analisis_de_cobranzas/
 │   ├── carga.py                            # Funciones para ingesta de datos en MySQL
 │   └── extraccion.py                       # Funciones para extraer y unificar datos
 │   └── transformacion.py                   # Funciones para normalizar datos
+│
+├── sql/                                 # Scripts SQL
+│   ├── 1_PU_UA_DDL.sql                    # Define estructura de BDs
+│   ├── 2_PU_UA_inserts.sql                # Ingesta datos en BDs
+│   ├── 3_PU_UA_SO_calendario.sql          # Crea SP de para tabla dim "calendario"
+│   ├── 4_PU_UA_capa_dos_vistas.sql        # Crea vistas para consumo final
 │
 ├── README.md                            # Presentación e intrucciones importantes
 │
